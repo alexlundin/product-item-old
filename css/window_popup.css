@@ -1,0 +1,72 @@
+.mfp-bg{
+    z-index: 300000 !important;
+}
+.mfp-wrap{
+    z-index: 300001 !important;
+}
+#popup {
+    position: fixed;
+    bottom: 50%;
+    left: 50%;
+    transform: translateY(50%) translateX(-50%);
+    padding: 40px 20px 20px;
+    max-width: 860px;
+    height: 490px;
+    width: 85%;
+    background: #fff;
+    -webkit-box-shadow: 0 2px 25px #000;
+    -moz-box-shadow: 0 2px 25px #000;
+    box-shadow: 0 2px 25px #000;
+    -webkit-transition: max-width .2s;
+    -moz-transition: max-width .2s;
+    transition: max-width .2s;
+}
+#popup table{
+    width: 100%;
+    height: 150px;
+    overflow-y: scroll;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+#popup td, #popup th{
+    border: 1px solid #cccccc;
+    padding: 5px;
+    font-size: 14px;
+}
+#popup td{
+    cursor: pointer;
+}
+#popup .tb_first{
+    width: 50px;
+    text-align: center;
+}
+#popup .tb_last{
+    width: 300px;
+}
+#popup .tb_second{
+    width: 450px;
+}
+#popup table tbody, #popup table thead {
+    display: block;
+    width: 100%;
+}
+#popup table tbody
+{
+    overflow: auto;
+    height: 281px;
+}
+#wares_search{
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 10px 10px 10px 42px;
+    background: 5px 50% url(../i/search.png) no-repeat;
+    font-size: 1.3em;
+}
+tbody tr.hide{
+    display: none;
+}
+.small-text{
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,140 @@
+.b-stickers{
+    margin: auto;
+    width: fit-content;
+
+}
+.b-stickers:after, .b-stickers:before {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+.b-sticker.first {
+    margin-left: -22px;
+}
+.b-sticker {
+    float: left;
+    position: relative;
+    width: 233px;
+    height: 233px;
+    padding: 30px;
+    text-align: center;
+    font-style: italic;
+    font-family: Georgia,sans-serif;
+    line-height: 1.2em;
+    box-sizing: border-box;
+    transition: margin .5s;
+    font-size: 16px;
+    margin-left: -29px;
+    background-size: cover!important;
+}
+.b-sticker.sticker-green {
+    color: #336071;
+    background-repeat: no-repeat;
+    background-image: url(../i/green.png);
+    background-image: url(../i/green.webp);
+}
+.b-sticker.sticker-orange {
+    color: #336071;
+    background-repeat: no-repeat;
+    background-image: url(../i/orange.png);
+    background-image: url(../i/orange.webp);
+}
+.b-sticker.sticker-blue {
+    color: #336071;
+    background-repeat: no-repeat;
+    background-image: url(../i/blue.png);
+    background-image: url(../i/blue.webp);
+}
+.b-stickers .b-sticker .wrap-stick {
+    width: 186px;
+    height: 186px;
+    margin-left: 10px;
+    display: table-cell;
+    vertical-align: middle;
+}
+@media only screen and (min-width: 992px) {
+    .l-block, .l-book-card .l-book-stickers, .l-book-card .l-book-tags {
+        display: block;
+        width: 51%;
+        float: left;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .l-book-card .l-book-stickers {
+        padding: 0;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .l-book-card .l-book-description, .l-book-card .l-book-figure, .l-book-card .l-book-stickers {
+        padding: 0 80px;
+    }
+
+    .l-book-card .l-book-stickers {
+        display: none;
+        padding: 0 40px;
+        box-sizing: border-box;
+    }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+    .b-sticker {
+        float: left;
+        position: relative;
+        width: 200px;
+        height: 200px;
+        padding: 30px;
+        text-align: center;
+        font-style: italic;
+        font-family: Georgia,sans-serif;
+        font-size: .9375em;
+        line-height: 1.2em;
+        box-sizing: border-box;
+        transition: margin .5s;
+        font-size: 15px;
+        margin-left: -29px;
+        background-size: cover!important;
+    }
+    .b-stickers .b-sticker .wrap-stick {
+        width: 170px;
+        height: 150px;
+        margin-left: 10px;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+}
+@media only screen and (max-width: 559px){
+    .b-stickers {
+        margin: auto;
+        width: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .last-sticker{
+        margin-top: -61px;
+    }
+}
+@media only screen and (max-width: 420px){
+    .b-stickers .b-sticker.first{
+        margin-left: 0;
+    }
+    .b-stickers .b-sticker{
+        margin-left: 0;
+    }
+    .b-sticker:nth-child(2){
+        margin-top: -50px;
+        margin-left: 0;
+    }
+    .last-sticker{
+        margin-top: -50px;
+        margin-left: 0;
+    }
+    .b-sticker{
+        padding: 15px;
+    }
+}
+
