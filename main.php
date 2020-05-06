@@ -1,19 +1,28 @@
 <?php
 /**
- * Plugin Name: Товары и Преимущества
+ * Plugin Name: Товары и Преимущества by Alex Lundin
  * Description: Плагин позволяет создавать товары и размещать и через шорткод как карточки с описанием и фото
- * Version:     1.4
+ * Author: Alex Lundin
+ * Version:     1.4.2
  * License:     GPL2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  *
  */
 
+
+
 require 'plugin-update-checker/plugin-update-checker.php';
-$MyUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-    'https://alexlundin.com/wp-update-server?action=get_metadata&slug=product-item', //Metadata URL.
-    __FILE__, //Full path to the main plugin file.
-    'product-item' //Plugin slug. Usually it's the same as the name of the directory.
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/alexlundin/product-item-old/',
+	__FILE__,
+	'product-item'
 );
+
+// //Optional: If you're using a private repository, specify the access token like this:
+// $myUpdateChecker->setAuthentication('your-token-here');
+
+//Optional: Set the branch that contains the stable release.
+// $myUpdateChecker- > > setBranch('master');
 
 require_once 'Product.php';
 require_once 'Edge.php';
