@@ -390,11 +390,11 @@ add_action('init', function () {
     $wares_post = [
         'labels' => $labels,
         'singular_label' => 'wares',
-        'public' => true,
+        'public' => false,
         'exclude_from_search' => true,
         'query_var' => 'wares',
-        'publicly_queryable' => true,
-        'has_archive' => true,
+        'publicly_queryable' => false,
+        'has_archive' => false,
         'hierarchical' => false,
         'can_export' => true,
         'rewrite' => ['slug' => 'wares', 'with_front' => true],
@@ -405,6 +405,16 @@ add_action('init', function () {
     register_taxonomy_for_object_type('category', 'wares');
     register_post_type('wares', $wares_post);
 });
+
+add_action( 'template_redirect', function() {
+    $post_type = get_post_type( );
+
+    if( is_post_type_archive('wares')|| $post_type == 'wares' ){
+        wp_redirect( get_site_url(), 301 );
+        exit;
+    }
+} );
+
 add_action('admin_menu', function () use ($wares_metabox) {
     foreach ($wares_metabox['page'] as $meta) {
         add_meta_box($wares_metabox['id'], $wares_metabox['title'], 'show_metabox', $wares_metabox['page'], 'normal', 'high', $wares_metabox);

@@ -7,6 +7,7 @@ class Edge{
         add_shortcode( 'rounds', array($this, 'add_shortcode_rounds_box'));
         add_action( 'wp_enqueue_scripts', array($this, 'add_js_rounds_footer'));
         add_action('init', array($this, 'add_type_rounds'));
+        add_action( 'template_redirect', array($this, 'rewrite'));
         add_action('admin_menu', array($this, 'add_custom_field_metabox_rounds'));
         add_action('save_post', array($this, 'custom_field_save_rounds'));
         add_action('admin_footer', array($this, 'round_plag_get_rounds'));
@@ -16,6 +17,15 @@ class Edge{
         add_filter( 'add_menu_classes',array($this, 'round_plag_show_pending_number'));
         add_action('wp_ajax_roundplagadd', array($this, 'round_plag_form_add_q'));
         add_action('wp_ajax_nopriv_roundplagadd', array($this, 'round_plag_form_add_q'));
+    }
+
+    public function rewrite() {
+        $post_type = get_post_type( );
+
+        if( is_post_type_archive('rounds')|| $post_type == 'rounds' ){
+            wp_redirect( get_site_url(), 301 );
+            exit;
+        }
     }
 
     public function add_type_rounds(){
@@ -35,7 +45,7 @@ class Edge{
         $post_type_rounds = array(
             'labels' 			=> $labels_rounds,
             'singular_label' 	=> 'rounds',
-            'public' 			=> true,
+            'public' 			=> false,
             'exclude_from_search' => true,
             'show_ui' 			=> true,
             'menu_icon' => 'dashicons-megaphone',
