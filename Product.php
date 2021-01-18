@@ -394,6 +394,8 @@ add_action('init', function () {
         'exclude_from_search' => true,
         'query_var' => 'wares',
         'publicly_queryable' => false,
+        'show_ui' => true,
+        'show_in_nav_menu' => true,
         'has_archive' => false,
         'hierarchical' => false,
         'can_export' => true,
