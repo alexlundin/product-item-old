@@ -31,15 +31,6 @@ class Product_Item_Admin {
 	 */
 	private $plugin_name;
 
-    /**
-     * Custom Post Type Name
-     *
-     * @since    1.0.0
-     * @access   private
-     * @var      string $cpt_name .
-     */
-    private $cpt_name;
-
 	/**
 	 * The version of this plugin.
 	 *
@@ -60,50 +51,10 @@ class Product_Item_Admin {
 
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
-		$this->cpt_name = 'wares';
 
 	}
 
-    /**
-     * Register form post types
-     *
-     * @return void
-     */
-    public function register_post_type()
-    {
-        $args = array(
-            'label'               => __('Product Items', 'product-item'),
-            'public'              => false,
-            'publicly_queryable'  => false,
-            'exclude_from_search' => true,
-            'show_ui'             => true,
-            'show_in_menu'        => false,
-            'capability_type'     => 'post',
-            'hierarchical'        => false,
-            'query_var'           => false,
-            'supports'            => array('title', 'editor'),
-            'labels'              => array(
-                'name'               => __('Product Items', 'product-item'),
-                'singular_name'      => __('Product', 'product-item'),
-                'menu_name'          => __('Product Items', 'product-item'),
-                'add_new'            => __('Add Product', 'product-item'),
-                'add_new_item'       => __('Add New Product', 'product-item'),
-                'edit'               => __('Edit', 'product-item'),
-                'edit_item'          => __('Edit Product', 'product-item'),
-                'new_item'           => __('New Product', 'product-item'),
-                'view'               => __('View Product', 'product-item'),
-                'view_item'          => __('View Product', 'product-item'),
-                'search_items'       => __('Search Product', 'product-item'),
-                'not_found'          => __('No Product Found', 'product-item'),
-                'not_found_in_trash' => __('No Product Found in Trash', 'product-item'),
-                'parent'             => __('Parent Product', 'product-item'),
-            ),
-        );
-        register_post_type($this->cpt_name, $args);
-    }
-
-
-    /**
+	/**
 	 * Register the stylesheets for the admin area.
 	 *
 	 * @since    1.0.0
