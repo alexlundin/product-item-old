@@ -4,7 +4,7 @@
  * Description: Плагин позволяет создавать товары и размещать и через шорткод как карточки с описанием и фото
  * Author: Alex Lundin
  * Author URI: https://vk.com/aslundin
- * Version:     1.4.5
+ * Version:     1.4.6
  * License:     GPL2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  *

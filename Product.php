@@ -506,8 +506,8 @@ add_action('save_post', function ($post_id) use ($wares_metabox) {
 });
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('wares-style', path_plugin . 'css/products.css');
-    wp_enqueue_script('wares-script', path_plugin . 'js/main-prod.js', null, null, true);
-    wp_enqueue_script('wares-async', path_plugin . 'js/wares-script.js', null, null, true);
+    wp_enqueue_script('wares-script', path_plugin . 'js/main-prod.js', null, '1.5', true);
+    wp_enqueue_script('wares-async', path_plugin . 'js/wares-script.js', null, '1.5', true);
 });
 add_action('admin_footer', function () {
     wp_enqueue_script('magnific', path_plugin . 'assets/magnific/jquery.magnific-popup.js', array('jquery'), '1.0', true);
@@ -638,12 +638,12 @@ function wares_ajax()
             $out .= ' <div class="product_block-wrapper">';
             $out .= '<div class="product_block-inner">';
             $out .= '<div class="group">';
-            $out .= '<div class="product-image"><a href="' . $wares_link . '">';
+            $out .= '<div class="product-image"><a href="' . $wares_link . '" target="_blank">';
             $out .= $post_thumb;
             $out .= '</a></div>';
             $out .= '<div class="meta">';
-            $out .= '<div class="product-name"><a href="' . $wares_link . '">' . $post_title . '</a></div>';
-            $out .= '<div class="title"><a href="' . $wares_link . '">' . $text_link . '</a></div>';
+            $out .= '<div class="product-name"><a href="' . $wares_link . '" target="_blank">' . $post_title . '</a></div>';
+            $out .= '<div class="title"><a href="' . $wares_link . '" target="_blank">' . $text_link . '</a></div>';
             $out .= '<span class="description">' . $post_content . '</span>';
             $out .= '<div class="product-pricebox-sources">';
             if ($arrow_btn != "") {
@@ -657,9 +657,9 @@ function wares_ajax()
 
             if ($animation_btn != "") {
 
-                $out .= '<a href="' . $wares_link . '" class="btn btn-size-normal pulses" style="color:#ffffff; background-color:#fa5d49;" >' . $btn_text . '</a>';
+                $out .= '<a href="' . $wares_link . '" class="btn btn-size-normal pulses" style="color:#ffffff; background-color:#fa5d49;" target="_blank" >' . $btn_text . '</a>';
             } else {
-                $out .= '<a href="' . $wares_link . '" class="btn btn-size-normal" style="color:#ffffff; background-color:#fa5d49;" >' . $btn_text . '</a>';
+                $out .= '<a href="' . $wares_link . '" class="btn btn-size-normal" style="color:#ffffff; background-color:#fa5d49;" target="_blank">' . $btn_text . '</a>';
 
             }
             $out .= '</div>';
@@ -681,12 +681,12 @@ function wares_ajax()
             }
             $out .= '<div class="product_block-inner">';
             $out .= '<div class="group">';
-            $out .= '<div class="product-image"><a href="' . $wares_link . '">';
+            $out .= '<div class="product-image"><a href="' . $wares_link . '" target="_blank">';
             $out .= $post_thumb;
             $out .= '</a></div>';
             $out .= '<div class="meta">';
-            $out .= '<div class="product-name"><a href="' . $wares_link . '">' . $post_title . '</a></div>';
-            $out .= '<div class="title"><a href="' . $wares_link . '">' . $text_link . '</a></div>';
+            $out .= '<div class="product-name"><a href="' . $wares_link . '" target="_blank">' . $post_title . '</a></div>';
+            $out .= '<div class="title"><a href="' . $wares_link . '" target="_blank">' . $text_link . '</a></div>';
             $out .= '<span class="description">' . $post_content . '</span>';
             $out .= '<div class="product-pricebox-sources">';
             if ($arrow_btn != "") {
@@ -700,9 +700,9 @@ function wares_ajax()
 
             if ($animation_btn != "") {
 
-                $out .= '<a href="' . $wares_link . '" class="btn btn-size-normal pulses" style="color:#ffffff; background-color:#fa5d49;" >' . $btn_text . '</a>';
+                $out .= '<a href="' . $wares_link . '" class="btn btn-size-normal pulses" style="color:#ffffff; background-color:#fa5d49;" target="_blank">' . $btn_text . '</a>';
             } else {
-                $out .= '<a href="' . $wares_link . '" class="btn btn-size-normal" style="color:#ffffff; background-color:#fa5d49;" >' . $btn_text . '</a>';
+                $out .= '<a href="' . $wares_link . '" class="btn btn-size-normal" style="color:#ffffff; background-color:#fa5d49;" target="_blank">' . $btn_text . '</a>';
 
             }
             $out .= '</div>';
@@ -725,7 +725,7 @@ function wares_ajax()
             if ($count != '') {
                 $out .= '<div class="product_block-new__count">' . $count . '</div>';
             }
-            $out .= '<div class="product-image-container"><a href="' . $wares_link . '">';
+            $out .= '<div class="product-image-container"><a href="' . $wares_link . '" target="_blank">';
             $out .= $post_thumb;
             $out .= '</a></div>';
             if ($zoom_btn != "") {
@@ -734,17 +734,17 @@ function wares_ajax()
                 $out .= '<div class="btn-box">';
             }
             if ($animation_btn != "") {
-                $out .= '<a href="' . $wares_link . '" class="btn_item__button pulses">' . $btn_text . '</a>';
+                $out .= '<a href="' . $wares_link . '" class="btn_item__button pulses" target="_blank">' . $btn_text . '</a>';
             } else {
-                $out .= '<a href="' . $wares_link . '" class="btn_item__button" >' . $btn_text . '</a>';
+                $out .= '<a href="' . $wares_link . '" class="btn_item__button" target="_blank">' . $btn_text . '</a>';
 
             }
             $out .= '</div>';
             $out .= '</div>';
             $out .= '<div class="product_block-2__column-content">';
             $out .= '<div class="product_block-2__bar"></div>';
-            $out .= '<div class="product_block-2__title"><a href="' . $wares_link . '">' . $post_title . '</a></div>';
-            $out .= '<div class="title"><a href="' . $wares_link . '">' . $text_link . '</a></div>';
+            $out .= '<div class="product_block-2__title"><a href="' . $wares_link . '" target="_blank">' . $post_title . '</a></div>';
+            $out .= '<div class="title"><a href="' . $wares_link . '" target="_blank">' . $text_link . '</a></div>';
             $out .= '<span class="description">' . $post_content . '</span>';
             $out .= '</div>';
             $out .= '</div>';
@@ -762,7 +762,7 @@ function wares_ajax()
             if ($count != '') {
                 $out .= '<div class="product_block-new__count">' . $count . '</div>';
             }
-            $out .= '<div class="product-image-container"><a href="' . $wares_link . '">';
+            $out .= '<div class="product-image-container"><a href="' . $wares_link . '" target="_blank">';
             $out .= $post_thumb;
             $out .= '</a></div>';
             if ($zoom_btn != "") {
@@ -771,17 +771,17 @@ function wares_ajax()
                 $out .= '<div class="btn-box">';
             }
             if ($animation_btn != "") {
-                $out .= '<a href="' . $wares_link . '" class="btn_item__button pulses">' . $btn_text . '</a>';
+                $out .= '<a href="' . $wares_link . '" class="btn_item__button pulses" target="_blank">' . $btn_text . '</a>';
             } else {
-                $out .= '<a href="' . $wares_link . '" class="btn_item__button" >' . $btn_text . '</a>';
+                $out .= '<a href="' . $wares_link . '" class="btn_item__button" target="_blank">' . $btn_text . '</a>';
 
             }
             $out .= '</div>';
             $out .= '</div>';
             $out .= '<div class="product_block-2__column-content">';
             $out .= '<div class="product_block-2__bar"></div>';
-            $out .= '<div class="product_block-2__title"><a href="' . $wares_link . '">' . $post_title . '</a></div>';
-            $out .= '<div class="title"><a href="' . $wares_link . '">' . $text_link . '</a></div>';
+            $out .= '<div class="product_block-2__title"><a href="' . $wares_link . '" v>' . $post_title . '</a></div>';
+            $out .= '<div class="title"><a href="' . $wares_link . '" target="_blank">' . $text_link . '</a></div>';
             $out .= '<span class="description">' . $post_content . '</span>';
             $out .= '</div>';
             $out .= '</div>';
