@@ -207,12 +207,12 @@ add_shortcode('ware_item', function ($atts, $content = null) {
                 $out .= ' <div class="product_block-wrapper">';
                 $out .= '<div class="product_block-inner">';
                 $out .= '<div class="group">';
-                $out .= '<div class="product-image"><a href="' . $wares_link . '">';
+                $out .= '<div class="product-image"><a href="' . $wares_link . '" target="_blank">';
                 $out .= $post_thumb;
                 $out .= '</a></div>';
                 $out .= '<div class="meta">';
-                $out .= '<div class="product-name"><a href="' . $wares_link . '">' . $post_title . '</a></div>';
-                $out .= '<div class="title"><a href="' . $wares_link . '">' . $text_link . '</a></div>';
+                $out .= '<div class="product-name"><a href="' . $wares_link . '" target="_blank">' . $post_title . '</a></div>';
+                $out .= '<div class="title"><a href="' . $wares_link . '" target="_blank">' . $text_link . '</a></div>';
                 $out .= '<span class="description">' . $post_content . '</span>';
                 $out .= '<div class="product-pricebox-sources">';
                 if ($arrow_btn != "") {
@@ -226,9 +226,9 @@ add_shortcode('ware_item', function ($atts, $content = null) {
 
                 if ($animation_btn != "") {
 
-                    $out .= '<a href="' . $wares_link . '" class="btn btn-size-normal pulses" style="color:#ffffff; background-color:#fa5d49;" >' . $btn_text . '</a>';
+                    $out .= '<a href="' . $wares_link . '" class="btn btn-size-normal pulses" style="color:#ffffff; background-color:#fa5d49;" target="_blank">' . $btn_text . '</a>';
                 } else {
-                    $out .= '<a href="' . $wares_link . '" class="btn btn-size-normal" style="color:#ffffff; background-color:#fa5d49;" >' . $btn_text . '</a>';
+                    $out .= '<a href="' . $wares_link . '" class="btn btn-size-normal" style="color:#ffffff; background-color:#fa5d49;" target="_blank">' . $btn_text . '</a>';
 
                 }
                 $out .= '</div>';
@@ -250,12 +250,12 @@ add_shortcode('ware_item', function ($atts, $content = null) {
                 }
                 $out .= '<div class="product_block-inner">';
                 $out .= '<div class="group">';
-                $out .= '<div class="product-image"><a href="' . $wares_link . '">';
+                $out .= '<div class="product-image"><a href="' . $wares_link . '" target="_blank">';
                 $out .= $post_thumb;
                 $out .= '</a></div>';
                 $out .= '<div class="meta">';
-                $out .= '<div class="product-name"><a href="' . $wares_link . '">' . $post_title . '</a></div>';
-                $out .= '<div class="title"><a href="' . $wares_link . '">' . $text_link . '</a></div>';
+                $out .= '<div class="product-name"><a href="' . $wares_link . '" target="_blank">' . $post_title . '</a></div>';
+                $out .= '<div class="title"><a href="' . $wares_link . '" target="_blank">' . $text_link . '</a></div>';
                 $out .= '<span class="description">' . $post_content . '</span>';
                 $out .= '<div class="product-pricebox-sources">';
                 if ($arrow_btn != "") {
@@ -269,9 +269,9 @@ add_shortcode('ware_item', function ($atts, $content = null) {
 
                 if ($animation_btn != "") {
 
-                    $out .= '<a href="' . $wares_link . '" class="btn btn-size-normal pulses" style="color:#ffffff; background-color:#fa5d49;" >' . $btn_text . '</a>';
+                    $out .= '<a href="' . $wares_link . '" class="btn btn-size-normal pulses" style="color:#ffffff; background-color:#fa5d49;" target="_blank">' . $btn_text . '</a>';
                 } else {
-                    $out .= '<a href="' . $wares_link . '" class="btn btn-size-normal" style="color:#ffffff; background-color:#fa5d49;" >' . $btn_text . '</a>';
+                    $out .= '<a href="' . $wares_link . '" class="btn btn-size-normal" style="color:#ffffff; background-color:#fa5d49;" target="_blank">' . $btn_text . '</a>';
 
                 }
                 $out .= '</div>';
@@ -294,7 +294,7 @@ add_shortcode('ware_item', function ($atts, $content = null) {
                 if ($count != '') {
                     $out .= '<div class="product_block-new__count">' . $count . '</div>';
                 }
-                $out .= '<div class="product-image-container"><a href="' . $wares_link . '">';
+                $out .= '<div class="product-image-container"><a href="' . $wares_link . '" target="_blank">';
                 $out .= $post_thumb;
                 $out .= '</a></div>';
                 if ($zoom_btn != "") {
@@ -303,17 +303,17 @@ add_shortcode('ware_item', function ($atts, $content = null) {
                     $out .= '<div class="btn-box">';
                 }
                 if ($animation_btn != "") {
-                    $out .= '<a href="' . $wares_link . '" class="btn_item__button pulses">' . $btn_text . '</a>';
+                    $out .= '<a href="' . $wares_link . '" class="btn_item__button pulses" target="_blank">' . $btn_text . '</a>';
                 } else {
-                    $out .= '<a href="' . $wares_link . '" class="btn_item__button" >' . $btn_text . '</a>';
+                    $out .= '<a href="' . $wares_link . '" class="btn_item__button" target="_blank">' . $btn_text . '</a>';
 
                 }
                 $out .= '</div>';
                 $out .= '</div>';
                 $out .= '<div class="product_block-2__column-content">';
                 $out .= '<div class="product_block-2__bar"></div>';
-                $out .= '<div class="product_block-2__title"><a href="' . $wares_link . '">' . $post_title . '</a></div>';
-                $out .= '<div class="title"><a href="' . $wares_link . '">' . $text_link . '</a></div>';
+                $out .= '<div class="product_block-2__title"><a href="' . $wares_link . '" target="_blank">' . $post_title . '</a></div>';
+                $out .= '<div class="title"><a href="' . $wares_link . '" target="_blank">' . $text_link . '</a></div>';
                 $out .= '<span class="description">' . $post_content . '</span>';
                 $out .= '</div>';
                 $out .= '</div>';
@@ -331,7 +331,7 @@ add_shortcode('ware_item', function ($atts, $content = null) {
                 if ($count != '') {
                     $out .= '<div class="product_block-new__count">' . $count . '</div>';
                 }
-                $out .= '<div class="product-image-container"><a href="' . $wares_link . '">';
+                $out .= '<div class="product-image-container"><a href="' . $wares_link . '" target="_blank">';
                 $out .= $post_thumb;
                 $out .= '</a></div>';
                 if ($zoom_btn != "") {
@@ -340,17 +340,17 @@ add_shortcode('ware_item', function ($atts, $content = null) {
                     $out .= '<div class="btn-box">';
                 }
                 if ($animation_btn != "") {
-                    $out .= '<a href="' . $wares_link . '" class="btn_item__button pulses">' . $btn_text . '</a>';
+                    $out .= '<a href="' . $wares_link . '" class="btn_item__button pulses" target="_blank">' . $btn_text . '</a>';
                 } else {
-                    $out .= '<a href="' . $wares_link . '" class="btn_item__button" >' . $btn_text . '</a>';
+                    $out .= '<a href="' . $wares_link . '" class="btn_item__button" target="_blank" >' . $btn_text . '</a>';
 
                 }
                 $out .= '</div>';
                 $out .= '</div>';
                 $out .= '<div class="product_block-2__column-content">';
                 $out .= '<div class="product_block-2__bar"></div>';
-                $out .= '<div class="product_block-2__title"><a href="' . $wares_link . '">' . $post_title . '</a></div>';
-                $out .= '<div class="title"><a href="' . $wares_link . '">' . $text_link . '</a></div>';
+                $out .= '<div class="product_block-2__title"><a href="' . $wares_link . '" target="_blank">' . $post_title . '</a></div>';
+                $out .= '<div class="title"><a href="' . $wares_link . '" target="_blank">' . $text_link . '</a></div>';
                 $out .= '<span class="description">' . $post_content . '</span>';
                 $out .= '</div>';
                 $out .= '</div>';
